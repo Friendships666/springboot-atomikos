@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.mapper.master.UserMapper">
+
+    <resultMap id="userResultMap" type="com.smile.pojo.User">
+        <result property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="no" column="no" />
+
+    </resultMap>
+
+    <select id="selectUserAll" resultMap="userResultMap">
+        SELECT id,name,no FROM base_user
+    </select>
+
+</mapper>

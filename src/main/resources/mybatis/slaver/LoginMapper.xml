@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.mapper.slaver.LoginMapper">
+
+    <resultMap id="loginResultMap" type="com.smile.pojo.Login">
+        <result property="id" column="id" />
+        <result property="loginName" column="login_name" />
+        <result property="password" column="password" />
+
+    </resultMap>
+
+    <select id="selectAllLogin" resultMap="loginResultMap">
+        SELECT id,login_name,password FROM sys_login
+    </select>
+
+</mapper>
